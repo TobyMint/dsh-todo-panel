@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Todo panel",
+    "description": "A private todo list in the sidebar: create, edit, complete and delete items, with priority and due dates. Human-only by design — the agent gets no tools and no prompt text for it."
+  }
+}

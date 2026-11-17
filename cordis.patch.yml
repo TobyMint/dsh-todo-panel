@@ -1,0 +1,7 @@
+# dsh-todo-panel bundle 层：插入插件行。
+# host 半（exports "."）跑在 host 进程：个人待办存储 + /api/todo HTTP/SSE；
+# client 半（exports "./client"）跑在 Web GUI：侧边栏「待办」入口 + 中心列待办页面。
+- insert:
+    - id: todo-panel
+      name: 'dsh-todo-panel'
+      config: {}
