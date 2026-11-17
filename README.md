@@ -63,18 +63,19 @@ dsh-todo-panel/
 
 ## 安装
 
-需要把它装进某个 DSH profile：
+这是一个标准 DSH 组合包（`package.json` 里声明了 `dsh.bundle.patch`，并带有
+`cordis.patch.yml`），因此和官方插件一样，可以直接在 Web 侧边栏的**插件**页安装、
+启用或卸载，插件管理器会自己维护依赖与 `dsh.profile.bundles`。
+
+手动安装则是两步：
 
 ```bash
-# 从 GitHub 安装（固定 tag，推荐）
-dsh plugin --profile web add github:TobyMint/dsh-todo-panel#v0.1.0
-
-# 本地开发时改用 link，改完代码刷新页面即生效
-dsh plugin --profile web add link:/path/to/dsh-todo-panel
+# 1) 装依赖（固定 tag；本地开发时改用 link:/path/to/checkout）
+dsh plugin --profile web add github:TobyMint/dsh-todo-panel#v0.2.0
 ```
 
-装完确认 profile 的 `package.json` 里 `dsh.profile.bundles` 含有 `dsh-todo-panel`
-（这一步 dsh 不会自动补），然后重启 `dsh web`。
+2) 把 `dsh-todo-panel` 加进 profile `package.json` 的 `dsh.profile.bundles`，
+然后重启 `dsh web`。`dsh plugin` 只是 pnpm 的转发，不会替你改这个列表。
 
 数据落在 `$DSH_HOME/todo-panel/`（默认 `~/.dsh/todo-panel/`），与安装来源无关，
 换来源重装不会丢待办。

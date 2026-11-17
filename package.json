@@ -1,14 +1,15 @@
 {
   "name": "dsh-todo-panel",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.2.0",
   "type": "module",
   "description": "Sidebar Todo panel for DSH: a private, human-only checklist with create, edit, complete, delete, priority and due dates. Registers no agent tools and no prompt text.",
+  "main": "./index.js",
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",
     "./locale/*.json": "./locale/*.json",
-    "./icon": "./icon.svg"
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
   },
   "files": [
     "index.js",
@@ -16,8 +17,21 @@
     "cordis.patch.yml",
     "locale/*.json",
     "icon.svg",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TobyMint/dsh-todo-panel.git"
+  },
+  "homepage": "https://github.com/TobyMint/dsh-todo-panel#readme",
+  "bugs": {
+    "url": "https://github.com/TobyMint/dsh-todo-panel/issues"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
@@ -28,7 +42,9 @@
       "inject": [
         "@deepseek-ai/dsh-client-runtime"
       ]
+    },
+    "engines": {
+      "dsh": ">=0.2.0-rc.2"
     }
-  },
-  "license": "Apache-2.0"
+  }
 }
