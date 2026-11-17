@@ -71,7 +71,7 @@ dsh-todo-panel/
 
 ```bash
 # 1) 装依赖（固定 tag；本地开发时改用 link:/path/to/checkout）
-dsh plugin --profile web add github:TobyMint/dsh-todo-panel#v0.2.0
+dsh plugin --profile web add github:TobyMint/dsh-todo-panel#v0.2.1
 ```
 
 2) 把 `dsh-todo-panel` 加进 profile `package.json` 的 `dsh.profile.bundles`，

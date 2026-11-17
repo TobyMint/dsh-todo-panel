@@ -1,6 +1,6 @@
 {
   "name": "dsh-todo-panel",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "module",
   "description": "Sidebar Todo panel for DSH: a private, human-only checklist with create, edit, complete, delete, priority and due dates. Registers no agent tools and no prompt text.",
   "main": "./index.js",
@@ -22,7 +22,8 @@
   ],
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=20"
+    "node": ">=20",
+    "dsh": ">=0.2.0-rc.2"
   },
   "repository": {
     "type": "git",
@@ -42,9 +43,6 @@
       "inject": [
         "@deepseek-ai/dsh-client-runtime"
       ]
-    },
-    "engines": {
-      "dsh": ">=0.2.0-rc.2"
     }
   }
 }
